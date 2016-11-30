@@ -7,8 +7,15 @@
     <style>
     /* a style sheet needs to be present for cursor hiding and custom cursors to work. */
     </style>
+        <script type="text/javascript">
+        function resize_canvas(){
+            canvas = document.getElementById("canvas");
+            canvas.width  = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+    </script>
   </head>
-  <body>
+  <body onresize="resize_canvas()">
     <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="1100px" width="1920px"></canvas>
     <script type='text/javascript'>
   var Module = {
